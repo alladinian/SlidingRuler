@@ -46,17 +46,17 @@ public protocol ScaleView: FractionableView, Equatable {
 }
 
 extension ScaleView {
-    var body: some View {
+    public var body: some View {
         shape
             .frame(size: .init(width: width, height: height))
             .fixedSize()
     }
 
-    var unitMarkOffset: CGFloat { 0 }
-    var halfMarkOffset: CGFloat { 0 }
-    var fractionMarkOffset: CGFloat { 0 }
+    public var unitMarkOffset: CGFloat { 0 }
+    public var halfMarkOffset: CGFloat { 0  }
+    public var fractionMarkOffset: CGFloat { 0 }
 
-    static func ==(lhs: Self, rhs: Self) -> Bool {
+    public static func ==(lhs: Self, rhs: Self) -> Bool {
         lhs.width == rhs.width && lhs.height == rhs.height
     }
 }

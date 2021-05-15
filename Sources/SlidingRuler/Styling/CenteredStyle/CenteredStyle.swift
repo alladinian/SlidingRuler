@@ -30,6 +30,9 @@
 import SwiftUI
 
 public struct CenteredSlindingRulerStyle: SlidingRulerStyle {
+    public init() {
+
+    }
     public var cursorAlignment: VerticalAlignment = .top
 
     public func makeCellBody(configuration: SlidingRulerStyleConfiguation) -> some FractionableView {

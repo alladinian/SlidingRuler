@@ -30,8 +30,8 @@
 import SwiftUI
 import SmoothOperators
 
-protocol NativeRulerCellView: RulerCellView { }
-extension NativeRulerCellView {
+public protocol NativeRulerCellView: RulerCellView { }
+public extension NativeRulerCellView {
     var maskShape: some Shape {
         guard !isComplete else { return ScaleMask(originX: .zero, width: cellWidth) }
         guard cellBounds.overlaps(bounds) else { return ScaleMask.zero }

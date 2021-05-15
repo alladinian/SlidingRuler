@@ -35,6 +35,6 @@ public protocol FractionableView: View {
 }
 
 extension FractionableView {
-    static var fractions: Int { 10 }
-    static var hasHalf: Bool { fractions.isEven }
+    public static var fractions: Int { 10  }
+    public static var hasHalf: Bool { fractions.isEven }
 }

@@ -43,7 +43,7 @@ public protocol RulerCellView: FractionableView, Equatable {
     var maskShape: MaskShape { get }
 }
 
-extension RulerCellView {
+public extension RulerCellView {
     static var fractions: Int { Scale.fractions }
 
     var cellBounds: ClosedRange<CGFloat> {
