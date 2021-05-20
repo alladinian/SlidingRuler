@@ -34,7 +34,7 @@ public struct BlankCenteredSlidingRulerStyle: SlidingRulerStyle {
 
     public let cursorAlignment: VerticalAlignment = .top
 
-    public func makeCellBody(configuration: SlidingRulerStyleConfiguation) -> some FractionableView {
+    public func makeCellBody(configuration: SlidingRulerStyleConfiguration) -> some FractionableView {
         BlankCenteredCellBody(mark: configuration.mark,
                               bounds: configuration.bounds,
                               step: configuration.step,

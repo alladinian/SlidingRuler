@@ -33,7 +33,7 @@ public struct CenteredScaleView: ScaleView {
     
     public struct ScaleShape: Shape {
         fileprivate var unitMarkSize: CGSize { .init(width: 3.0, height: 40.0)}
-        fileprivate var halfMarkSize: CGSize { .init(width: UIScreen.main.scale == 3 ? 1.8 : 2.0, height: 20) }
+        fileprivate var halfMarkSize: CGSize { .init(width: UIScreen.main.scale == 3 ? 1.8 : 2.0, height: 24) }
         fileprivate var fractionMarkSize: CGSize { .init(width: 1.0, height: 15)}
 
         public func path(in rect: CGRect) -> Path {
@@ -67,7 +67,7 @@ public struct CenteredScaleView: ScaleView {
     public var halfMarkWidth: CGFloat { shape.halfMarkSize.width }
     public var fractionMarkWidth: CGFloat { shape.fractionMarkSize.width }
 
-    public init(width: CGFloat, height: CGFloat = 30) {
+    public init(width: CGFloat, height: CGFloat = 40) {
         self.width = width
         self.height = height
     }

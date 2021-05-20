@@ -40,7 +40,7 @@ public protocol SlidingRulerStyle {
     var hasHalf: Bool { get }
     var supportsPointerInteraction: Bool { get }
 
-    func makeCellBody(configuration: SlidingRulerStyleConfiguation) -> CellBody
+    func makeCellBody(configuration: SlidingRulerStyleConfiguration) -> CellBody
     func makeCursorBody() -> CursorBody
 }
 

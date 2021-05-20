@@ -47,7 +47,7 @@ struct Ruler: View, Equatable {
         .animation(nil)
     }
     
-    private func configuration(forCell cell: RulerCell) -> SlidingRulerStyleConfiguation {
+    private func configuration(forCell cell: RulerCell) -> SlidingRulerStyleConfiguration {
         return .init(mark: (cell.mark + markOffset) * step, bounds: bounds, step: step, formatter: formatter)
     }
     
