@@ -40,21 +40,21 @@ struct Ruler: View, Equatable {
     
     var body: some View {
         HStack(spacing: 0) {
-            ForEach(self.cells) { cell in
-                self.style.makeCellBody(configuration: self.configuration(forCell: cell))
+            ForEach(cells) { cell in
+                style.makeCellBody(configuration: configuration(forCell: cell))
             }
         }
         .animation(nil)
     }
     
     private func configuration(forCell cell: RulerCell) -> SlidingRulerStyleConfiguration {
-        return .init(mark: (cell.mark + markOffset) * step, bounds: bounds, step: step, formatter: formatter)
+        .init(mark: (cell.mark + markOffset) * step, bounds: bounds, step: step, formatter: formatter)
     }
     
     static func ==(lhs: Self, rhs: Self) -> Bool {
         lhs.step == rhs.step &&
         lhs.cells.count == rhs.cells.count &&
-        (!StaticSlidingRulerStyleEnvironment.hasMarks || lhs.markOffset == rhs.markOffset)
+        (/*!StaticSlidingRulerStyleEnvironment.hasMarks ||*/ lhs.markOffset == rhs.markOffset)
     }
 }
 

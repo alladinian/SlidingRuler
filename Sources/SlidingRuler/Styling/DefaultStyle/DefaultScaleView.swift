@@ -29,13 +29,13 @@
 
 import SwiftUI
 
-struct DefaultScaleView: ScaleView {
-    struct ScaleShape: Shape {
+public struct DefaultScaleView: ScaleView {
+    public struct ScaleShape: Shape {
         fileprivate var unitMarkSize: CGSize { .init(width: 3.0, height: 27.0)}
         fileprivate var halfMarkSize: CGSize { .init(width: UIScreen.main.scale == 3 ? 1.8 : 2.0, height: 19.0) }
         fileprivate var fractionMarkSize: CGSize { .init(width: 1.0, height: 11.0)}
         
-        func path(in rect: CGRect) -> Path {
+        public func path(in rect: CGRect) -> Path {
             let centerX = rect.center.x
             var p = Path()
             
@@ -61,15 +61,15 @@ struct DefaultScaleView: ScaleView {
         }
     }
 
-    var shape: ScaleShape { .init() }
-    let width: CGFloat
-    let height: CGFloat
+    public var shape: ScaleShape { .init() }
+    public let width: CGFloat
+    public let height: CGFloat
 
-    var unitMarkWidth: CGFloat { shape.unitMarkSize.width }
-    var halfMarkWidth: CGFloat { shape.halfMarkSize.width }
-    var fractionMarkWidth: CGFloat { shape.fractionMarkSize.width }
+    public var unitMarkWidth: CGFloat { shape.unitMarkSize.width }
+    public var halfMarkWidth: CGFloat { shape.halfMarkSize.width }
+    public var fractionMarkWidth: CGFloat { shape.fractionMarkSize.width }
 
-    init(width: CGFloat, height: CGFloat = 30) {
+    public init(width: CGFloat, height: CGFloat = 30) {
         self.width = width
         self.height = height
     }
