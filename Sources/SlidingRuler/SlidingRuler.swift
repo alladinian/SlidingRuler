@@ -161,9 +161,9 @@ public struct SlidingRuler<V>: View where V: BinaryFloatingPoint, V.Stride: Bina
         .onPreferenceChange(ControlWidthPreferenceKey.self, storeValueIn: $controlWidth) {
             self.updateCellsIfNeeded()
         }
-        .transaction {
-            if $0.animation != nil { $0.animation = .easeIn(duration: 0.1) }
-        }
+//        .transaction {
+//            if $0.animation != nil { $0.animation = .easeIn(duration: 0.1) }
+//        }
         .onHorizontalDragGesture(initialTouch: firstTouchHappened,
                                  prematureEnd: panGestureEndedPrematurely,
                                  perform: horizontalDragAction(withValue:))
